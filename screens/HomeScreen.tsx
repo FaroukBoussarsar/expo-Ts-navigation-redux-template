@@ -8,15 +8,15 @@ import { RootState } from '../redux/rootReducer';
 import { useAppDispatch } from '../redux/store';
 import { getUserSuccess } from '../redux/user/userSlice';
 import { getUser } from '../redux/user/userThunkAction';
-import { TabOneScreenNavigationProp, TabOneScreenRouteProp } from './types';
+import { HomeScreenNavigationProp, HomeScreenRouteProp } from './types';
 
 
-interface TabOneScreenProps {
-  navigation: TabOneScreenNavigationProp
-  route: TabOneScreenRouteProp
+interface HomeScreenProps {
+  navigation: HomeScreenNavigationProp
+  route: HomeScreenRouteProp
 }
 
-const  TabOneScreen: React.FC<TabOneScreenProps> = ({navigation}) => {
+const  HomeScreen: React.FC<HomeScreenProps> = ({navigation}) => {
   const user = useSelector((state: RootState) => state.user)
   const dispatch = useAppDispatch()
   console.log(user)
@@ -30,8 +30,11 @@ const  TabOneScreen: React.FC<TabOneScreenProps> = ({navigation}) => {
 
         }} 
        />
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo  path="/screens/TabOneScreen.tsx" />
+     <Button title='Login' 
+     onPress={()=>{
+      navigation.navigate('LoginScreen')
+     }}
+     />
     </View>
   );
 }
@@ -53,4 +56,4 @@ const styles = StyleSheet.create({
     width: '80%',
   },
 });
-export default TabOneScreen
+export default HomeScreen

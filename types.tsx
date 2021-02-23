@@ -9,11 +9,13 @@ export type BottomTabParamList = {
 };
 
 export type TabOneParamList = {
-  TabOneScreen: undefined;
+  HomeScreen: undefined;
+  LoginScreen:undefined;
 };
 
 export type TabTwoParamList = {
-  TabTwoScreen: {
+  SettingScreen: {
     id?: string
   };
+  LoginScreen:undefined;
 };

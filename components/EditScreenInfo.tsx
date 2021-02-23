@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import Colors from '../constants/Colors';
-import { TabOneScreenNavigationProp } from '../screens/types';
+import { HomeScreenNavigationProp } from '../screens/types';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
