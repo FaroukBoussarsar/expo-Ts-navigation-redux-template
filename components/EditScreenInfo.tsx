@@ -3,10 +3,21 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import Colors from '../constants/Colors';
+import { TabOneScreenNavigationProp } from '../screens/types';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
+type User = {
+  name: string
+}
+
+interface EditScreenInfo {
+  id:string
+  users: User[]
+}
+
 export default function EditScreenInfo({ path }: { path: string }) {
+ 
   return (
     <View>
       <View style={styles.getStartedContainer}>
